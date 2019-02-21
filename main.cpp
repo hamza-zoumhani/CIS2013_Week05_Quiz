@@ -59,6 +59,7 @@ int main(){
 				for(int j=0; j<MAX; j++){
 					printGrades();
 				}
+				break;
 				
 			default:
 				cout << choice << " is not valid..." << endl;
