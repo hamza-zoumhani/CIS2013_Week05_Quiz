@@ -23,7 +23,7 @@ void addStudent(int n){
 	cin >> name[n];
 }
 	
-void setgrade(int x){
+void setGrade(int x){
 	cout << "Enter Student " << x+1 << "'s name: ";
 	cin >> name[x];
 	cout << "Enter " << name[x] << "'s grade: ";
@@ -37,7 +37,6 @@ void printGrades(int y){
 
 int main(){
 	
-	int LEN;
 	char again = 'Y' && 'y';
 	
 	do{
@@ -52,14 +51,14 @@ int main(){
 			case 'b':
 			case 'B':
 				setGrade();
-				for(int i=0; i<LEN; i++){
+				for(int i=0; i<MAX; i++){
 					setGrade(i);
 				}
 				break;
 				
 			case 'c':
 			case 'C':
-				for(int j=0; j<LEN; j++){
+				for(int j=0; j<MAX; j++){
 					printGrades();
 				}
 				
