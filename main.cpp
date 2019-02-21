@@ -2,11 +2,12 @@
 #include <string>
 
 using namespace std;
-
+int h;
 const int MAX=30;
 int student[MAX];
 string name[MAX];
 char choice;
+
 
 void Menu(){
 	cout << "*********************************" << endl;
@@ -21,6 +22,7 @@ void Menu(){
 void addStudent(int n){
 	cout << "Enter student's name: ";
 	cin >> name[n];
+	h++;
 }
 	
 void setGrade(int x){
@@ -43,21 +45,20 @@ int main(){
 		switch(choice){
 			case 'a':
 			case 'A':
-				addStudent();
+				addStudent(h);
 				break;
 				
 			case 'b':
 			case 'B':
-				setGrade();
-				for(int i=0; i<MAX; i++){
+				for(int i; i<=h; i++){
 					setGrade(i);
 				}
-				break;
+				
 				
 			case 'c':
 			case 'C':
 				for(int j=0; j<MAX; j++){
-					printGrades();
+					printGrades(j);
 				}
 				break;
 				
