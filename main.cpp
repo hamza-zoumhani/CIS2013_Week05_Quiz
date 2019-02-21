@@ -50,14 +50,14 @@ int main(){
 				
 			case 'b':
 			case 'B':
-				for(int i; i<=h; i++){
+				for(int i; i<h; i++){
 					setGrade(i);
 				}
-				
+				break;
 				
 			case 'c':
 			case 'C':
-				for(int j=0; j<MAX; j++){
+				for(int j=0; j<h; j++){
 					printGrades(j);
 				}
 				break;
