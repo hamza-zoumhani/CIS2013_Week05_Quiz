@@ -23,19 +23,21 @@ void addStudent(int n){
 	cin >> name[n];
 }
 	
-void setGrade(int k, string name){
-	cout << "Enter student's name: ";
-	cin >> 
-	cout << "Enter " << name[k] << "'s grade: ";
-	cin >> student[k];
+void setgrade(int x){
+	cout << "Enter Student " << x+1 << "'s name: ";
+	cin >> name[x];
+	cout << "Enter " << name[x] << "'s grade: ";
+	cin >> student[x];
+	cout << endl;
 }
 
-void printGrade(int y){
+void printGrades(int y){
 	cout << name[y] << "'s grade is " << student[y] << endl;
 }
 
 int main(){
 	
+	int LEN;
 	char again = 'Y' && 'y';
 	
 	do{
@@ -49,12 +51,17 @@ int main(){
 				
 			case 'b':
 			case 'B':
-				setStudent();
+				setGrade();
+				for(int i=0; i<LEN; i++){
+					setGrade(i);
+				}
 				break;
 				
 			case 'c':
 			case 'C':
-				printGrade();
+				for(int j=0; j<LEN; j++){
+					printGrades();
+				}
 				
 			default:
 				cout << choice << " is not valid..." << endl;
