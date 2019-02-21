@@ -24,8 +24,6 @@ void addStudent(int n){
 }
 	
 void setGrade(int x){
-	cout << "Enter Student " << x+1 << "'s name: ";
-	cin >> name[x];
 	cout << "Enter " << name[x] << "'s grade: ";
 	cin >> student[x];
 	cout << endl;
